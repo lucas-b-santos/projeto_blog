@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+
+body, button, input, select, textarea {
+    font-family: 'K2D', sans-serif;
+    color: white;
+}
+
+:root {
+    --fundo: #082032;
+    --cinza: #334756;
+    --laranja: #FF4C29;
+    --azul: #2FA4FF;
+    --cinza-escuro: #2C394B;
+}
+
+* {box-sizing: border-box;}
+
+html, body {
+    margin: 0;
+    background: var(--fundo);
+}
+
+
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* define a margem e a gordura da fonte */
+
+h1, h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+button {
+    background: var(--laranja);
+    border: 0;
+    border-radius: 20px;
+    padding: 8px 35px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+
+}
+
+header {
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    position: relative;
+    width: 50%;
+    /* conteúdo usa apenas 50% da largura */
+    height: fit-content;
+    padding: 0 100px;
+}
+
+header .container h1 {
+    color: var(--azul);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    /* background: white; */
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+
+
+
+}
+
+nav img {
+    height: 45px;
+}
+
+nav ul a {
+    font-size: 20px;
+    color: var(--azul);
+    text-decoration: none;
+    margin: 0 35px;
+}
