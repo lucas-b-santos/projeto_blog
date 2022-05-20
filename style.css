@@ -61,10 +61,14 @@ header {
 
 header .container {
     position: relative;
-    width: 50%;
+    width: 70%;
     /* conteúdo usa apenas 50% da largura */
     height: fit-content;
     padding: 0 100px;
+}
+
+header .container img {
+    display:none; /*não mostra o elemento*/
 }
 
 header .container h1 {
@@ -78,8 +82,9 @@ nav {
     height: 75px;
     /* background: white; */
     padding: 0 100px;
-    position: sticky;
+    position: sticky; /*deixa a nav "grudada" na parte superior da tela*/
     top: 0;
+    text-align: center;
 
 
 
@@ -94,4 +99,20 @@ nav ul a {
     color: var(--azul);
     text-decoration: none;
     margin: 0 35px;
+}
+
+section {
+    background: purple;
+    height: 1000px;
+}
+
+@media(max-width:767px){
+    header .container img {
+        display: inline;
+        height: 45px;
+        margin-bottom: 80px;
+    }
+    nav img {
+        display: none;
+    }
 }
