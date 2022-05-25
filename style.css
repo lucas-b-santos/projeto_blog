@@ -84,10 +84,6 @@ nav {
     padding: 0 100px;
     position: sticky; /*deixa a nav "grudada" na parte superior da tela*/
     top: 0;
-    text-align: center;
-
-
-
 }
 
 nav img {
@@ -95,24 +91,52 @@ nav img {
 }
 
 nav ul a {
+    width: 200px;
     font-size: 20px;
     color: var(--azul);
     text-decoration: none;
     margin: 0 35px;
+    text-align: right;
 }
+
+nav ul a svg {
+    position: absolute;
+}
+
 
 section {
     background: purple;
     height: 1000px;
 }
 
+
+/*quando a tela for abaixo de 767px*/
 @media(max-width:767px){
     header .container img {
         display: inline;
-        height: 45px;
+        height: 55px;
         margin-bottom: 80px;
     }
     nav img {
         display: none;
+    }
+}
+
+/*quando a tela for abaixo de 480px*/
+@media(max-width:480px){
+    header .container {
+        padding: 0 40px;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        top: unset;
+        padding: 0 15px;
+    }
+
+    nav ul a {
+        font-size: 14px;
     }
 }
