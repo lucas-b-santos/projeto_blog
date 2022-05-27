@@ -81,7 +81,7 @@ nav {
     justify-content: space-between;
     height: 75px;
     /* background: white; */
-    padding: 0 100px;
+    padding: 0 50px;
     position: sticky; /*deixa a nav "grudada" na parte superior da tela*/
     top: 0;
 }
@@ -91,23 +91,41 @@ nav img {
 }
 
 nav ul a {
-    width: 200px;
     font-size: 20px;
     color: var(--azul);
     text-decoration: none;
     margin: 0 35px;
-    text-align: right;
 }
 
+
 nav ul a svg {
+    display: none;
+}
+
+section {
+    display: flex;
+    padding: 100px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+section .container {
+    width: 50%;
+    padding-right: 50px;
+}
+section h1 {
+    color: var(--azul);
+}
+
+section p {
+    margin-top: 50%;
+}
+
+section .img-container img {
+    width: 30%;
     position: absolute;
 }
 
-
-section {
-    background: purple;
-    height: 1000px;
-}
 
 
 /*quando a tela for abaixo de 767px*/
@@ -138,5 +156,9 @@ section {
 
     nav ul a {
         font-size: 14px;
+    }
+
+    nav ul a svg {
+        display: block;
     }
 }
