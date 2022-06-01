@@ -87,7 +87,7 @@ nav {
 }
 
 nav img {
-    height: 45px;
+    height: 55px;
 }
 
 nav ul a {
@@ -102,31 +102,50 @@ nav ul a svg {
     display: none;
 }
 
-section {
+.about-me {
     display: flex;
     padding: 100px;
     margin-bottom: 10px;
     width: 70%;
 }
 
-section .container {
-    width: 50%;
-    padding-right: 50px;
-}
 section h1 {
     color: var(--azul);
 }
 
-section p {
+.about-me .container p {
     margin-top: 50%;
+    width: 200%;
 }
 
-section .img-container img {
-    width: 30%;
+.about-me .container {
+    padding-right: 700px;
+
+}
+
+.about-me .img-container {
+    text-align: center;
+    position:relative;
+}
+
+.about-me .img-container img {
+    width: 400px;
+    height: 400px;
+}
+
+.about-me .img-container .line {
+    width: 450px;
+    height: 450px;
+    border: 3px solid var(--laranja);
+    
     position: absolute;
+    top: -25px;
+    left: -25px;
 }
 
-
+.about-me .img-container .line.green {
+    transform: rotate(-3.3deg);
+}
 
 /*quando a tela for abaixo de 767px*/
 @media(max-width:767px){
