@@ -11,7 +11,8 @@ body, button, input, select, textarea {
     --cinza: #334756;
     --laranja: #FF4C29;
     --azul: #2FA4FF;
-    --cinza-escuro: #2C394B;
+    --cinza-escuro: #202731;
+    --cinza-claro: #C5B5B5;
 }
 
 * {box-sizing: border-box;}
@@ -48,8 +49,9 @@ button {
     border-radius: 20px;
     padding: 8px 35px;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
+
 
 }
 
@@ -80,7 +82,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 75px;
-    /* background: white; */
     padding: 0 50px;
     position: sticky; /*deixa a nav "grudada" na parte superior da tela*/
     top: 0;
@@ -104,38 +105,32 @@ nav ul a svg {
 
 .about-me {
     display: flex;
-    padding: 100px;
-    margin-bottom: 10px;
-    width: 70%;
-}
-
-section h1 {
-    color: var(--azul);
-}
-
-.about-me .container p {
-    margin-top: 50%;
-    width: 300%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
 }
 
 .about-me .container {
-    padding-right: 700px;
+    width: 50%;
+}
 
+.about-me .container h1 {
+    color: var(--azul);
 }
 
 .about-me .img-container {
-    text-align: center;
-    position:relative;
+    position: relative;
+    margin-left: 30px;
 }
 
 .about-me .img-container img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 
 .about-me .img-container .line {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     border: 3px solid var(--laranja);
     
     position: absolute;
@@ -148,15 +143,196 @@ section h1 {
 }
 
 .services {
-    /* margin-top: 20px; */
-    /* text-align: center; */
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
 }
 
 .services h1 {
+    padding: 20px;
     color: var(--laranja);
-    margin-left: 100%;
+}
+
+.services .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.services .container .serv {
+    display: flex;
+    margin:10px 0 0 0;
+    width: 20%;
+    height: 250px;
+    background: var(--cinza);
+    border: 1px solid #FF4C29;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services .container .serv .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 75px;
+    background: var(--cinza-escuro);
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.services .container .serv .circle img {
+    width: 50px;
+    height: 50px;
+}
+
+.services .container .serv .titulo {
+    color: var(--azul);
+    margin: 10px;
+}
+.services .container .serv .texto {
+    font-size: small;
+    text-align: center;
+    margin: 10px;
+}
+
+.portfolio {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.portfolio h1 {
+    padding: 20px;
+    color: var(--azul);
+}
+
+.portfolio .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio .container .serv {
+    display: flex;
+    margin: 10px 0 0 0;
+    width: 20%;
+    height: 260px;
+    background: var(--cinza);
+    border: 1px solid #FF4C29;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
 
 }
+
+.portfolio .container .serv img {
+    margin: 10px;
+    width: 75%;
+    height: 100px;
+}
+
+.portfolio .container .serv .linguagens {
+    display: flex;
+    width: 150px;
+    justify-content: flex-start;
+}
+.portfolio .container .serv .linguagens .ling {
+    border: 1px solid var(--azul);
+    border-radius: 15px;
+    margin-right: 2px;
+}
+.portfolio .container .serv .linguagens .ling div {
+    font-size: x-small;
+    margin: 0 3px 0 3px;
+    color: var(--azul);
+    opacity: 0.9;
+}
+
+
+.portfolio .container .serv .titulo {
+    color: white;
+    margin: 10px;
+    font-size:  smaller;
+    text-align: center;
+}
+.portfolio .container .serv .texto {
+    font-size: small;
+    text-align: center;
+    color: var(--cinza-claro);
+    width: 80%;
+}
+
+.curriculo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 50px 100px;
+}
+
+.curriculo img {
+    width: 300px;
+    height: 200px;
+    margin-right: 100px;
+}
+
+.curriculo .container {
+    width: 40%;
+    height: 90%;
+    border: 1px solid var(--cinza);
+}
+
+.curriculo .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:  20px;
+}
+
+.curriculo .container .box h2 {
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.curriculo .container .dados-info {
+    display: flex;
+    font-size: small;
+}
+
+.curriculo .container .dados-info .dados {
+    color: var(--cinza-claro);
+}
+.curriculo .container .dados-info .info {
+    margin-left: 80px;
+} 
+
+.fim {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fim h1 {
+    color: var(--laranja);
+    margin:0 0 100px 0;
+    text-align: center;
+}
+
+.fim .links {
+    display: flex;
+    margin: 100px 0 0 0;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+.fim .links img{
+    width: 30px;
+    margin: 50px 50px 0 50px;
+}
+
 
 /*quando a tela for abaixo de 767px*/
 @media(max-width:767px){
