@@ -61,6 +61,7 @@ header {
     align-items: center;
 }
 
+
 header .container {
     position: relative;
     width: 70%;
@@ -77,6 +78,10 @@ header .container h1 {
     color: var(--azul);
 }
 
+header img {
+    width: 15%;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -85,13 +90,15 @@ nav {
     padding: 0 50px;
     position: sticky; /*deixa a nav "grudada" na parte superior da tela*/
     top: 0;
+    margin-bottom: 100px;
+    z-index: 1;
 }
 
 nav img {
     height: 55px;
 }
 
-nav ul a {
+nav .links a {
     font-size: 20px;
     color: var(--azul);
     text-decoration: none;
@@ -99,19 +106,19 @@ nav ul a {
 }
 
 
-nav ul a svg {
+nav .icones {
     display: none;
 }
 
 .about-me {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 50px 100px;
 }
 
 .about-me .container {
-    width: 50%;
+    margin-right: 50px;
 }
 
 .about-me .container h1 {
@@ -124,18 +131,18 @@ nav ul a svg {
 }
 
 .about-me .img-container img {
-    width: 300px;
-    height: 300px;
+    width: 60%;
+    height: 50%;
 }
 
 .about-me .img-container .line {
-    width: 350px;
-    height: 350px;
+    width: 70%;
+    height: 115%;
     border: 3px solid var(--laranja);
     
     position: absolute;
-    top: -25px;
-    left: -25px;
+    top: -10%;
+    left: -5%;
 }
 
 .about-me .img-container .line.green {
@@ -190,6 +197,7 @@ nav ul a svg {
 .services .container .serv .titulo {
     color: var(--azul);
     margin: 10px;
+    text-align: center;
 }
 .services .container .serv .texto {
     font-size: small;
@@ -218,7 +226,7 @@ nav ul a svg {
     display: flex;
     margin: 10px 0 0 0;
     width: 20%;
-    height: 260px;
+    height: 280px;
     background: var(--cinza);
     border: 1px solid #FF4C29;
     border-radius: 15px;
@@ -304,9 +312,6 @@ nav ul a svg {
 .curriculo .container .dados-info .dados {
     color: var(--cinza-claro);
 }
-.curriculo .container .dados-info .info {
-    margin-left: 80px;
-} 
 
 .fim {
     padding: 50px 100px;
@@ -333,13 +338,94 @@ nav ul a svg {
     margin: 50px 50px 0 50px;
 }
 
+@media(max-width:906px){
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me .container {
+        margin-right: 0;
+        margin-bottom: 100px;
+    }
+    
+    .about-me .img-container {
+        position: relative;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+    }
+    
+    .about-me .img-container .line {
+        position: absolute;
+        margin-left: 20%;
+        margin-top: 1%;
+    }
+    .services h1 {
+        margin-bottom: 20px;
+    }
+    .services .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .services .container .serv {
+        margin-bottom: 50px;
+        width: 40%;
+        height: fit-content;
+    }
+    .portfolio h1 {
+        margin-bottom: 20px;
+    }
+    .portfolio .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .portfolio .container .serv {
+        display: flex;
+        margin-bottom: 50px;
+        width: 40%;
+        height:240px;
+        flex-direction: column;
+        
+
+    }
+
+    .portfolio .container .serv img {
+        width: 150px;
+        height: 100px;
+    }
+    .curriculo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .curriculo img {
+        margin: 0;
+        margin-top: -100px;
+        margin-bottom: 80px;
+    }
+    .curriculo .container {
+        width: 80%;
+    }
+}
 
 /*quando a tela for abaixo de 767px*/
 @media(max-width:767px){
+    header {
+        margin-bottom: 60px;
+    }
     header .container img {
         display: inline;
-        height: 55px;
-        margin-bottom: 80px;
+        width: 40%;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     nav img {
         display: none;
@@ -348,6 +434,15 @@ nav ul a svg {
         display: flex;
         align-items: center;
         padding: 0 50px;
+        margin: 0;
+    }
+    .services .container .serv {
+        width: 50%;
+    }
+
+    .portfolio .container .serv {
+        width: 50%;
+        height: 250px;
     }
 }
 
@@ -358,20 +453,53 @@ nav ul a svg {
     header .container {
         padding: 0 40px;
     }
+    .about-me {
+        margin-top: -150px;
+    }
+    .about-me .img-container {
+        width: 150%;
+    }
 
-    nav {
+    .services .container .serv {
+        width: 80%;
+    }
+
+    .portfolio .container .serv {
+        width: 80%;
+    }
+    .curriculo .container {
+        width: 150%;
+    }
+    .curriculo img {
+        width: 200px;
+        height: 180px;
+    }
+     nav {
+        display: flex;
+        justify-content: center;
         position: fixed;
         width: 100%;
-        bottom: 0;
+        bottom: 0; 
         top: unset;
         padding: 0 15px;
     }
 
-    nav ul a {
-        font-size: 14px;
+    nav .links {
+        display: none;
     }
 
-    /* nav ul a svg {
-        display: block;
-    } */
+    nav .icones {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+    }
+    nav ul a {
+        margin: 22px 22px -10px 22px;
+    }
+
+    nav ul a svg {
+        color: var(--azul);
+    }
+
 }
