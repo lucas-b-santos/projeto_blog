@@ -220,6 +220,7 @@ nav .icones {
 .portfolio .container {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .portfolio .container .serv {
