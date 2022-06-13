@@ -454,7 +454,7 @@ nav .icones {
         padding: 0 40px;
     }
     .about-me {
-        margin-top: -150px;
+        margin-top: -100px;
     }
     .about-me .img-container {
         width: 150%;
@@ -472,7 +472,7 @@ nav .icones {
     }
     .curriculo img {
         width: 200px;
-        height: 180px;
+        height: 150px;
     }
      nav {
         display: flex;
