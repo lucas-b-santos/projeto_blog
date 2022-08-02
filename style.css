@@ -51,7 +51,7 @@ button {
     color: white;
     font-weight: 600;
     font-size: 16px;
-
+    cursor: pointer;
 
 }
 
@@ -336,6 +336,7 @@ nav .icones {
 .fim .links img{
     width: 30px;
     margin: 50px 50px 0 50px;
+    cursor: pointer;
 }
 
 @media(max-width:906px){
